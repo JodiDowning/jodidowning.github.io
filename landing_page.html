@@ -20,6 +20,9 @@ header {
     background: white;
     border-bottom: 1px solid #e5e7eb;
 }
+header div.name {
+    font-size: 2.2em;
+}
 header nav a {
     margin-left: 25px;
     text-decoration: none;
@@ -75,6 +78,10 @@ header nav a:hover {
     margin-bottom: 10px;
     letter-spacing: 2px;
 }
+.feature:hover {
+    transform: translateY(-3px);
+    transition: 0.2s ease;
+}
 footer {
     text-align: center;
     padding: 30px;
@@ -99,7 +106,7 @@ header {
 
 <body>
 <header>
-  <div><strong>Jodi Downing</strong></div>
+  <div class="name"><strong>Jodi Downing</strong></div>
   <nav> <a href="#">Home</a> <a href="#">Features</a> <a href="#">Contact</a> </nav>
 </header>
 <section class="hero">
