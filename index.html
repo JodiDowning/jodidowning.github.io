@@ -10,18 +10,47 @@
       darkMode: 'class',
     }
   </script>
+<style>
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+</style>
 </head>
 
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
 <div class="max-w-6xl mx-auto px-6"> 
   
   <!-- NAVBAR -->
   <nav class="flex justify-between items-center py-6 sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur z-50">
     <h1 class="font-bold">Jodi Downing</h1>
-    <div class="flex items-center gap-6"> <a href="#projects" class="hover:text-blue-500">Projects</a> <a href="#experience" class="hover:text-blue-500">Experience</a> <a href="#contact" class="hover:text-blue-500">Contact</a> 
+    <div class="flex items-center gap-4"> <a href="#projects" class="hover:text-blue-500">Projects</a> <a href="#experience" class="hover:text-blue-500">Experience</a> <a href="#contact" class="hover:text-blue-500">Contact</a> 
       
       <!-- Dark Mode Toggle -->
-      <button onclick="toggleDark()" class="text-sm border px-3 py-1 rounded"> 🌙 </button>
+      <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"> 
+      
+      <!-- Moon Icon (default) -->
+      <svg id="theme-toggle-dark-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707 
+             8.001 8.001 0 1017.293 13.293z"/>
+      </svg>
+      
+      <!-- Sun Icon (hidden by default) -->
+      <svg id="theme-toggle-light-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 hidden opacity-0 -rotate-90 transition-all duration-300" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd"
+      d="M10 3.22l.61 1.64a1 1 0 00.95.69h1.73
+         a1 1 0 01.59 1.81l-1.4 1.02a1 1 0 00-.36 1.12
+         l.61 1.64a1 1 0 01-1.54 1.12l-1.4-1.02
+         a1 1 0 00-1.18 0l-1.4 1.02a1 1 0 01-1.54-1.12
+         l.61-1.64a1 1 0 00-.36-1.12L3.12 7.36
+         a1 1 0 01.59-1.81h1.73a1 1 0 00.95-.69L7 3.22
+         a1 1 0 011.9 0z"
+      clip-rule="evenodd"/>
+      </svg>
+      </button>
     </div>
   </nav>
   
@@ -158,6 +187,48 @@
 	  el.classList.add('opacity-0', 'translate-y-5', 'transition', 'duration-700');
 	  observer.observe(el);
 	});
-	</script>
+
+  const toggleBtn = document.getElementById('theme-toggle');
+  const darkIcon = document.getElementById('theme-toggle-dark-icon');
+  const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+  function setTheme(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+
+      darkIcon.classList.add('opacity-0', 'rotate-90');
+      lightIcon.classList.remove('hidden');
+      setTimeout(() => {
+        lightIcon.classList.remove('opacity-0', '-rotate-90');
+        darkIcon.classList.add('hidden');
+      }, 150);
+
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+
+      lightIcon.classList.add('opacity-0', '-rotate-90');
+      darkIcon.classList.remove('hidden');
+      setTimeout(() => {
+        darkIcon.classList.remove('opacity-0', 'rotate-90');
+        lightIcon.classList.add('hidden');
+      }, 150);
+    }
+  }
+
+  // Initial load
+  const isDark =
+    localStorage.getItem('theme') === 'dark' ||
+    (!localStorage.getItem('theme') &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  setTheme(isDark);
+
+  toggleBtn.addEventListener('click', () => {
+    const isDarkNow = document.documentElement.classList.contains('dark');
+    setTheme(!isDarkNow);
+  });
+</script>
 </body>
 </html>
