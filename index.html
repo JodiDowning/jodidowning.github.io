@@ -28,43 +28,62 @@
   <!-- HERO -->
   <section class="py-24 max-w-2xl fade-in">
     <p class="text-gray-500 dark:text-gray-400 mb-2">Hi, I’m Jodi —</p>
-    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6"> Front-End Web Developer focused on building fast, user-friendly web experiences. </h1>
-    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8"> I improve performance, usability, and SEO through clean, maintainable code. </p>
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Front-end developer focused on building fast, usable, and maintainable web experiences.</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">I improve performance, usability, and SEO through clean, efficient code.</p>
     <div class="flex gap-4"> <a href="#projects" class="bg-blue-500 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">View My Work</a> <a href="#contact" class="border border-blue-500 text-blue-500 px-5 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition">Contact Me</a> </div>
   </section>
   
   <!-- PROJECTS -->
   <section id="projects" class="py-20">
-    <h2 class="text-2xl font-bold mb-12">Featured Work</h2>
+    <h2 class="text-2xl font-bold mb-12">Selected Work</h2>
     <div class="mb-16">
       <div class="group rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"> 
         
         <!-- IMAGE -->
-        <div class="relative h-[300px] md:h-[420px] overflow-hidden rounded-xl">
-
-		  <img src="BoatNotes.png" class="w-full h-full object-cover object-[center_60%]">
-
-		  <!-- GRADIENT OVERLAY -->
-		  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-
-		  <!-- TEXT OVERLAY (optional) -->
-		  <div class="absolute bottom-6 left-6 text-white max-w-md">
-			<p class="text-sm uppercase opacity-80">Featured Project</p>
-			<h3 class="text-2xl font-bold">BoatNotes</h3>
-		  </div>
-
-		</div>
+        <div class="relative h-[300px] md:h-[420px] overflow-hidden"> <img src="BoatNotes.png" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"> 
+          
+          <!-- OVERLAY -->
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <a href="https://www.boatnotes.com" class="text-white font-semibold border border-white px-6 py-3 rounded hover:bg-white hover:text-black transition" target="_blank"> View Project </a> </div>
+        </div>
         
         <!-- CONTENT -->
         <div class="p-6">
           <p class="text-xs uppercase text-gray-400 mb-2">Featured Project</p>
           <h3 class="text-2xl font-bold mb-3"> Boatnotes </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4 text-lg">Developed a content-driven platform with a focus on performance, usability, and clear information structure.</p>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-lg">Built a structured content platform focused on making information easy to find, navigate, and use.</p>
           <p class="text-sm text-blue-500"> HTML &middot; CSS &middot; JavaScript &middot; WordPress </p>
         </div>
       </div>
     </div>
-    <div class="grid md:grid-cols-2 gap-10"> 
+	<!-- SECONDARY PROJECT -->
+	<div class="max-w-4xl mx-auto">
+
+	  <div class="group rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+
+		<!-- IMAGE -->
+		<div class="relative h-[260px] overflow-hidden">
+		  <img src="TheWoodsmithStore.png" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+		</div>
+
+		<!-- CONTENT -->
+		<div class="p-6">
+		  <p class="text-xs uppercase text-gray-400 mb-2">Project</p>
+
+		  <h3 class="text-xl font-semibold mb-2">The Woodsmith Store</h3>
+
+		  <p class="text-gray-600 dark:text-gray-300 mb-3">Improved performance and SEO, contributing to a 20% increase in organic traffic.</p>
+
+		  <p class="text-sm text-blue-500">HTML &middot; CSS &middot; JavaScript &middot; WordPress</p>
+		</div>
+
+	  </div>
+
+	</div> 
+	  
+	  
+	  
+	  
+    <div class="grid md:grid-cols-2 gap-10" style="display:none;"> 
       
       <!-- SECONDARY PROJECT -->
       <div class="group rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"> 
@@ -76,7 +95,7 @@
         <div class="p-5">
           <p class="text-xs uppercase text-gray-400 mb-2">Project</p>
           <h3 class="text-lg font-semibold mb-2"> The Woodsmith Store </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-3"> Enhanced performance, usability, and SEO, resulting in a 20% increase in organic traffic. </p>
+          <p class="text-gray-600 dark:text-gray-300 mb-3">Improved performance and SEO, contributing to a 20% increase in organic traffic.</p>
           <p class="text-sm text-blue-500"> HTML &middot; CSS &middot; JavaScript &middot; WordPress </p>
         </div>
       </div>
@@ -93,6 +112,10 @@
         </div>
       </div>
     </div>
+	  
+	  
+	  
+	  
   </section>
   
   <!-- EXPERIENCE -->
@@ -101,15 +124,15 @@
     <div class="space-y-6 border-l-2 border-blue-500 pl-6">
       <div>
         <h3 class="font-semibold">Front-End Developer &ndash; The Woodsmith Store</h3>
-        <p class="text-gray-600 dark:text-gray-300"> Improving performance, usability, and SEO for an eCommerce platform.</p>
+        <p class="text-gray-600 dark:text-gray-300">Improving performance, usability, and SEO for an eCommerce platform.</p>
       </div>
       <div>
         <h3 class="font-semibold">Senior Product Owner &ndash; CDS Global</h3>
-        <p class="text-gray-600 dark:text-gray-300"> Led Agile workflows and collaborated on front-end feature development.</p>
+        <p class="text-gray-600 dark:text-gray-300">Led Agile workflows and collaborated on front-end features and product improvements.</p>
       </div>
       <div>
         <h3 class="font-semibold">Senior Front-End Web Developer &ndash; CDS Global</h3>
-        <p class="text-gray-600 dark:text-gray-300"> Built responsive, user-focused web interfaces.</p>
+        <p class="text-gray-600 dark:text-gray-300">Built and maintained responsive, user-focused web interfaces.</p>
       </div>
     </div>
   </section>
@@ -123,7 +146,7 @@
   <!-- ABOUT -->
   <section class="py-20 fade-in">
     <h2 class="text-2xl font-bold mb-6">About</h2>
-    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">I'm a front-end web developer with over 20 years of experience building responsive, high-performance websites. My background in both development and product ownership allows me to create solutions that balance user needs with business goals. I focus on performance, usability, and writing clean, maintainable code. </p>
+    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Front-end developer with 20+ years of experience building and improving web experiences.<br /><br />I focus on performance, usability, and writing clean, maintainable code. My background in both development and product ownership helps me prioritize work that improves both user experience and business outcomes.</p>
   </section>
   
   <!-- CONTACT -->
