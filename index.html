@@ -9,7 +9,7 @@
     tailwind.config = {
       darkMode: 'class',
     }
-</script>
+  </script>
 </head>
 
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
@@ -40,18 +40,27 @@
       <div class="group rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"> 
         
         <!-- IMAGE -->
-        <div class="relative h-[300px] md:h-[420px] overflow-hidden"> <img src="BoatNotes.png" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"> 
-          
-          <!-- OVERLAY -->
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <a href="https://www.boatnotes.com" class="text-white font-semibold border border-white px-6 py-3 rounded hover:bg-white hover:text-black transition" target="_blank"> View Project </a> </div>
-        </div>
+        <div class="relative h-[300px] md:h-[420px] overflow-hidden rounded-xl">
+
+		  <img src="BoatNotes.png" class="w-full h-full object-cover object-[center_60%]">
+
+		  <!-- GRADIENT OVERLAY -->
+		  <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
+		  <!-- TEXT OVERLAY (optional) -->
+		  <div class="absolute bottom-6 left-6 text-white max-w-md">
+			<p class="text-sm uppercase opacity-80">Featured Project</p>
+			<h3 class="text-2xl font-bold">BoatNotes</h3>
+		  </div>
+
+		</div>
         
         <!-- CONTENT -->
         <div class="p-6">
           <p class="text-xs uppercase text-gray-400 mb-2">Featured Project</p>
           <h3 class="text-2xl font-bold mb-3"> Boatnotes </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4 text-lg"> Designed and built a content-focused platform with an emphasis on usability, structure, and performance. </p>
-          <p class="text-sm text-blue-500"> HTML • CSS • JavaScript • WordPress </p>
+          <p class="text-gray-600 dark:text-gray-300 mb-4 text-lg">Developed a content-driven platform with a focus on performance, usability, and clear information structure.</p>
+          <p class="text-sm text-blue-500"> HTML &middot; CSS &middot; JavaScript &middot; WordPress </p>
         </div>
       </div>
     </div>
@@ -63,16 +72,12 @@
         <!-- IMAGE -->
         <div class="relative h-80 overflow-hidden"> <img src="TheWoodsmithStore.png" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"> </div>
         
-	 	<!-- OVERLAY -->
-	  	<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <a href="https://thewoodsmithstore.com" class="text-white font-semibold border border-white px-6 py-3 rounded hover:bg-white hover:text-black transition" target="_blank"> View Project </a> </div>
-	  </div>
-		  
         <!-- CONTENT -->
         <div class="p-5">
           <p class="text-xs uppercase text-gray-400 mb-2">Project</p>
           <h3 class="text-lg font-semibold mb-2"> The Woodsmith Store </h3>
           <p class="text-gray-600 dark:text-gray-300 mb-3"> Enhanced performance, usability, and SEO, resulting in a 20% increase in organic traffic. </p>
-          <p class="text-sm text-blue-500"> HTML • CSS • JavaScript • WordPress </p>
+          <p class="text-sm text-blue-500"> HTML &middot; CSS &middot; JavaScript &middot; WordPress </p>
         </div>
       </div>
       
@@ -84,7 +89,7 @@
           <p class="text-xs uppercase text-gray-400 mb-2">Project</p>
           <h3 class="text-lg font-semibold mb-2"> Another Project </h3>
           <p class="text-gray-600 mb-3"> Short, clean description of what this project does. </p>
-          <p class="text-sm text-blue-500"> HTML • CSS • JavaScript </p>
+          <p class="text-sm text-blue-500"> HTML &middot; CSS &middot; JavaScript </p>
         </div>
       </div>
     </div>
@@ -95,15 +100,15 @@
     <h2 class="text-2xl font-bold mb-8">Experience</h2>
     <div class="space-y-6 border-l-2 border-blue-500 pl-6">
       <div>
-        <h3 class="font-semibold">Front-End Developer — The Woodsmith Store</h3>
+        <h3 class="font-semibold">Front-End Developer &ndash; The Woodsmith Store</h3>
         <p class="text-gray-600 dark:text-gray-300"> Improving performance, usability, and SEO for an eCommerce platform.</p>
       </div>
       <div>
-        <h3 class="font-semibold">Senior Product Owner — CDS Global</h3>
+        <h3 class="font-semibold">Senior Product Owner &ndash; CDS Global</h3>
         <p class="text-gray-600 dark:text-gray-300"> Led Agile workflows and collaborated on front-end feature development.</p>
       </div>
       <div>
-        <h3 class="font-semibold">Senior Front-End Web Developer — CDS Global</h3>
+        <h3 class="font-semibold">Senior Front-End Web Developer &ndash; CDS Global</h3>
         <p class="text-gray-600 dark:text-gray-300"> Built responsive, user-focused web interfaces.</p>
       </div>
     </div>
@@ -118,13 +123,13 @@
   <!-- ABOUT -->
   <section class="py-20 fade-in">
     <h2 class="text-2xl font-bold mb-6">About</h2>
-    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">I’m a front-end web developer with over 20 years of experience building responsive, high-performance websites. My background in both development and product ownership allows me to create solutions that balance user needs with business goals. I focus on performance, usability, and writing clean, maintainable code. </p>
+    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">I'm a front-end web developer with over 20 years of experience building responsive, high-performance websites. My background in both development and product ownership allows me to create solutions that balance user needs with business goals. I focus on performance, usability, and writing clean, maintainable code. </p>
   </section>
   
   <!-- CONTACT -->
   <section id="contact" class="py-20 text-center fade-in">
     <h2 class="text-2xl font-bold mb-6">Let’s work together</h2>
-    <p class="mb-4">jodidowning@outlook.com</p>
+    <p class="mb-4"><a href="mailtp:jodidowning@outlook.com">jodidowning@outlook.com</a></p>
     <div class="flex justify-center gap-6 text-blue-500"> <a href="#">LinkedIn</a> <a href="#">GitHub</a> </div>
   </section>
 </div>
